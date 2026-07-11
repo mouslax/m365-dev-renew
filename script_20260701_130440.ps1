@@ -1,2 +1,5 @@
-Write-Host 'Microsoft 365 dev activity'
-Get-Date
+function Get-DevStatus {
+    Write-Host 'Tenant active'
+    Get-Date
+}
+Get-DevStatus
