@@ -1,0 +1,14 @@
+# Local reports and tenant data
+reports/
+*.json
+*.csv
+logs/
+activity.txt
+
+# Local helper script; do not publish command transcripts
+/script.ps1
+
+# PowerShell and editor files
+*.log
+.vscode/
+.DS_Store
