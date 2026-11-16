@@ -64,3 +64,26 @@ It does not modify users, licenses, groups or tenant configuration.
 
 Graph permissions and tenant policies may affect which information
 can be retrieved.
+
+## Group Governance Audit
+
+The project includes a Microsoft Graph group governance inventory.
+
+Run it with:
+
+```powershell
+pwsh -File .\src\Invoke-GroupInventory.ps1
+```
+
+The script inventories Entra ID groups, retrieves their owners,
+and flags groups without owners for review.
+
+Required delegated Microsoft Graph permissions:
+
+- `Group.Read.All`
+- `GroupMember.Read.All`
+
+Reports are exported as JSON and CSV to
+`~/Documents/M365-Tenant-Reports`.
+
+The governance module can also be tested independently with Pester.
